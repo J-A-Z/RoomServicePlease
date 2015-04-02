@@ -1,6 +1,7 @@
 package Main
 {
 	import Menus.MainMenu;
+	import Menus.PlayMenu;
 	import net.flashpunk.Engine;
 	import net.flashpunk.FP;
 	import Util.AssetLoader;
@@ -22,7 +23,6 @@ package Main
 			theLoader = new AssetLoader;
 			
 			mainMenu = new MainMenu();
-			
 		}
 		
 		override public function init():void {
