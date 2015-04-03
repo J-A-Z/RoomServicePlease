@@ -6,6 +6,7 @@ package Menus
 	import net.flashpunk.World;
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
+	import Main.GameEngine;
 	
 	/**
 	 * @author Zach
@@ -27,17 +28,17 @@ package Menus
 		}
 		
 		private function playMenu():void {
-			FP.world = new PlayMenu();
+			FP.world = GameEngine.playMenu;
 			
 		}
 		
 		private function optionsMenu():void {
-			FP.world = new OptionsMenu();
+			FP.world = GameEngine.optionsMenu
 			
 		}
 		
 		private function managementMenu():void {
-			FP.world = new ManagementMenu();
+			FP.world = GameEngine.managementMenu;
 			
 		}
 		

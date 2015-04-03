@@ -54,15 +54,13 @@ package Main
 				
 			}
 			
-			Draw.rect(0, FP.height - 10, barProgress * 3.2, 10, 0xFF0000);
-			
-			trace(barProgress);
-			
-			if (barProgress == 250) {
+			if (barProgress == 250 && progress == 3) {
 				
 				ready = true;
 				
 			}
+			
+			Draw.rect(0, FP.height - 10, barProgress * 3.2, 10, 0xFF0000);
 			
 		}
 		

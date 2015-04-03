@@ -1,6 +1,8 @@
 package Main
 {
 	import Menus.MainMenu;
+	import Menus.ManagementMenu;
+	import Menus.OptionsMenu;
 	import Menus.PlayMenu;
 	import net.flashpunk.Engine;
 	import net.flashpunk.FP;
@@ -16,13 +18,18 @@ package Main
 		
 		public static var mainMenu:MainMenu;
 		
+		public static var playMenu:PlayMenu;
+		
+		public static var optionsMenu:OptionsMenu;
+		
+		public static var managementMenu:ManagementMenu;
+		
 		public function GameEngine() {
 			
 			super(800, 600, 60, false);
 			
 			theLoader = new AssetLoader;
 			
-			mainMenu = new MainMenu();
 		}
 		
 		override public function init():void {
