@@ -6,20 +6,17 @@ package Menus
 	import net.flashpunk.World;
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
+	import Main.GameEngine;
 	
 	/**
 	 * @author Amanda
 	 */
 	public class OptionsMenu extends World
 	{
-		[Embed(source = "../../assets/optionsScreen.png")]
-		private const OPT_IMG:Class;
-		
-		private var img:Image = new Image(OPT_IMG);
 		
 		public function OptionsMenu() 
 		{
-			addGraphic(img, 0, 0, 0);
+			addGraphic(GameEngine.theLoader.optionsScreen, 0, 0, 0);
 			add(new Button(gfxOptionMenu, 305, 300, 10, 190));
 			add(new Button(audioMenu, 30, 450, 10, 190));
 			add(new Button(keymapMenu, 30, 500, 10, 190));
@@ -27,17 +24,17 @@ package Menus
 		
 		private function gfxOptionMenu(): void 
 		{
-			FP.world = new GFXOptionMenu();
+			FP.world = GameEngine.GFXOptionsMenu;
 		}
 		
 		private function audioMenu(): void
 		{
-			FP.world = new AudioOptionsMenu();
+			FP.world = GameEngine.audioOptionsMenu;
 		}
 		
 		private function keymapMenu(): void
 		{
-			FP.world = new KeymapMenu();
+			FP.world = GameEngine.keymapMenu;
 		}
 	}
 

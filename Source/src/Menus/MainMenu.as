@@ -13,14 +13,10 @@ package Menus
 	 */
 	public class MainMenu extends World
 	{
-		[Embed(source = "../../assets/mainScreen.png")]
-		private const MAIN_IMG:Class;
-		
-		private var img:Image = new Image(MAIN_IMG);
 		
 		public function MainMenu()
 		{
-			addGraphic(img, 0, 0, 0);
+			addGraphic(GameEngine.theLoader.mainMenuScreen, 0, 0, 0);
 			add(new Button(playMenu, 305, 368, 10, 190));
 			add(new Button(optionsMenu, 305, 418, 10, 190));
 			add(new Button(managementMenu, 305, 478, 10, 190));

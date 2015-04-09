@@ -1,5 +1,8 @@
 package Main
 {
+	import Menus.AudioOptionsMenu;
+	import Menus.GFXOptionMenu;
+	import Menus.KeymapMenu;
 	import Menus.MainMenu;
 	import Menus.ManagementMenu;
 	import Menus.OptionsMenu;
@@ -23,6 +26,12 @@ package Main
 		public static var optionsMenu:OptionsMenu;
 		
 		public static var managementMenu:ManagementMenu;
+		
+		public static var audioOptionsMenu:AudioOptionsMenu;
+		
+		public static var GFXOptionsMenu:GFXOptionMenu;
+		
+		public static var keymapMenu:KeymapMenu;
 		
 		public function GameEngine() {
 			

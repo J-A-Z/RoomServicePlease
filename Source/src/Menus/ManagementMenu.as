@@ -6,19 +6,17 @@ package Menus
 	import net.flashpunk.World;
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
+	import Main.GameEngine;
+	
 	/**
 	 * @author Amanda
 	 */
 	public class ManagementMenu extends World
 	{
-		[Embed(source = "../../assets/managementScreen.png")]
-		private const MNGMNT_IMG:Class;
-		
-		private var img:Image = new Image(MNGMNT_IMG);
 		
 		public function ManagementMenu() 
 		{
-			addGraphic(img, 0, 0, 0);
+			addGraphic(GameEngine.theLoader.managementScreen, 0, 0, 0);
 		}
 		
 	}

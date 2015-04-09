@@ -6,19 +6,17 @@ package Menus
 	import net.flashpunk.World;
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
+	import Main.GameEngine;
+	
 	/**
 	 * @author Amanda
 	 */
 	public class PlayMenu extends World
 	{
-		[Embed(source = "../../assets/playScreen.png")]
-		private const PLAY_IMG:Class;
-		
-		private var img:Image = new Image(PLAY_IMG);
 		
 		public function PlayMenu() 
 		{
-			addGraphic(img, 0, 0, 0);
+			addGraphic(GameEngine.theLoader.playScreen, 0, 0, 0);
 		}
 		
 	}

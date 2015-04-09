@@ -13,9 +13,6 @@ package Main
 	public class IntroScreen extends World
 	{
 		
-		[Embed(source = "../../assets/introScreen.png")] private const INTRO_IMG:Class;
-		private var img:Image = new Image(INTRO_IMG);
-		
 		private var assetLoader:AssetLoader = GameEngine.theLoader;
 		
 		private var ready:Boolean = false;
@@ -23,10 +20,13 @@ package Main
 		private var timer:int = 0;
 		private var barProgress:int = 0;
 		
+		[Embed(source="../../assets/screens/introScreen.png")] var img:Class;
+		private var introScreenImg:Image = new Image(img);
+		
 		public function IntroScreen() 
 		{
 			
-			addGraphic( img, 0, 0, 0);
+			addGraphic( introScreenImg, 0, 0, 0);
 			
 			assetLoader.load();
 			
