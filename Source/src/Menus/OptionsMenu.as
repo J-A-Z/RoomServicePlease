@@ -6,6 +6,7 @@ package Menus
 	import net.flashpunk.World;
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
+	
 	/**
 	 * @author Amanda
 	 */
@@ -19,8 +20,25 @@ package Menus
 		public function OptionsMenu() 
 		{
 			addGraphic(img, 0, 0, 0);
+			add(new Button(gfxOptionMenu, 305, 300, 10, 190));
+			add(new Button(audioMenu, 30, 450, 10, 190));
+			add(new Button(keymapMenu, 30, 500, 10, 190));
 		}
 		
+		private function gfxOptionMenu(): void 
+		{
+			FP.world = new GFXOptionMenu();
+		}
+		
+		private function audioMenu(): void
+		{
+			FP.world = new AudioOptionsMenu();
+		}
+		
+		private function keymapMenu(): void
+		{
+			FP.world = new KeymapMenu();
+		}
 	}
 
 }
