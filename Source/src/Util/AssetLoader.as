@@ -21,7 +21,7 @@ package Util
 		menuButtonH:Image, menuButtonN:Image, optionsButtonH:Image, optionsButtonN:Image, playButtonH:Image, playButtonN:Image, saveButtonH:Image, 
 		saveButtonN:Image, soundButtonH:Image, soundButtonN:Image, tutorialButtonH:Image, tutorialButtonN:Image, updateButtonH:Image, updateButtonN:Image;
 		
-		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS;
+		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS:Image;
 		
 		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
 		playScreen:Image, soundScreen:Image;

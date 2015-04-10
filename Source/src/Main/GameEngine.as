@@ -1,5 +1,8 @@
 package Main
 {
+	import flash.display.MovieClip;
+	import flash.display.Scene;
+	import flash.display.StageScaleMode;
 	import Menus.AudioOptionsMenu;
 	import Menus.GFXOptionMenu;
 	import Menus.KeymapMenu;
