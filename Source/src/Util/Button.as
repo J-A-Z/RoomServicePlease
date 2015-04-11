@@ -32,7 +32,7 @@ package Util
 		override public function update():void
 		{
 			
-			//collideRect(Input.mouseX, Input.mouseY, smallRec.x, smallRec.y, smallRec.width, smallRec.height)
+			
 			
 			if (smallRec.contains(Input.mouseX, Input.mouseY))
 			{
