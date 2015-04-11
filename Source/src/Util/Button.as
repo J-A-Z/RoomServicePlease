@@ -14,7 +14,7 @@ package Util
 	{
 		private var whenButtonClicked:Function;
 		private var imageNeu:Image, imageHov:Image;
-		private var hitbox:Rectangle;
+		private var smallRec:Rectangle;
 		
 		//private var hitbox:Rectangle;
 		public function Button(clickHandler:Function, imgN:Image, imgH:Image, someX:int, someY:int, someHeight:int, someWidth:int) //Takes in two images the spot you want to place the images and their height/width.
@@ -26,12 +26,15 @@ package Util
 			this.y = someY;
 			this.height = someHeight;
 			this.width = someWidth;
-			hitbox = new Rectangle(someX - 4, someY - 18, 192, 30);
+			smallRec = new Rectangle(someX + 10, someY + 5, someWidth - 20, someHeight - 10);
 		}
 		
 		override public function update():void
 		{
-			if (collideRect(Input.mouseX, Input.mouseY, hitbox.x, hitbox.y, hitbox.width, hitbox.height))
+			
+			//collideRect(Input.mouseX, Input.mouseY, smallRec.x, smallRec.y, smallRec.width, smallRec.height)
+			
+			if (smallRec.contains(Input.mouseX, Input.mouseY))
 			{
 				addGraphic(imageHov);
 			}
@@ -48,6 +51,9 @@ package Util
 				}
 				
 			}
+			
+			Draw.rect(smallRec.x, smallRec.y, smallRec.width, smallRec.height, 0xFFFFFF, 1, false);
+			
 		}
 	}
 
