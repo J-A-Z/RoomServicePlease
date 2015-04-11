@@ -17,9 +17,9 @@ package Menus
 		public function MainMenu()
 		{
 			addGraphic(GameEngine.theLoader.mainMenuScreen, 0, 0, 0);
-			add(new Button(playMenu, 305, 368, 10, 190));
-			add(new Button(optionsMenu, 305, 418, 10, 190));
-			add(new Button(managementMenu, 305, 478, 10, 190));
+			add(new Button(playMenu,GameEngine.theLoader.playButtonN,GameEngine.theLoader.playButtonH, 300, 350, 50, 200));
+			add(new Button(optionsMenu, GameEngine.theLoader.optionsButtonN, GameEngine.theLoader.optionsButtonH, 300, 400, 50, 200));
+			add(new Button(managementMenu, GameEngine.theLoader.managementButtonN, GameEngine.theLoader.managementButtonH, 300, 450, 50, 200));
 			
 		}
 		
