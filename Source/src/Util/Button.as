@@ -36,10 +36,12 @@ package Util
 			
 			if (smallRec.contains(Input.mouseX, Input.mouseY))
 			{
+				
 				addGraphic(imageHov);
 			}
 			else
 			{
+				
 				addGraphic(imageNeu);
 			}
 			if (Input.mousePressed)
@@ -52,7 +54,7 @@ package Util
 				
 			}
 			
-			Draw.rect(smallRec.x, smallRec.y, smallRec.width, smallRec.height, 0xFFFFFF, 1, false);
+			
 			
 		}
 	}

@@ -7,16 +7,20 @@ package Menus
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
 	import Main.GameEngine;
+	import Util.InputHandler;
+	import Util.PlayerHUD;
 	
 	/**
 	 * @author Amanda
+	 *
 	 */
+	
 	public class PlayMenu extends World
 	{
-		
 		public function PlayMenu() 
 		{
 			addGraphic(GameEngine.theLoader.playScreen, 0, 0, 0);
+			add(new PlayerHUD());
 		}
 		
 	}
