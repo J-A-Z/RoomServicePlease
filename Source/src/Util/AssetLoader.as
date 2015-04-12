@@ -23,7 +23,7 @@ package Util
 		
 		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS:Image;
 		
-		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
+		public var controlsScreen:Image, foreScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
 		playScreen:Image, soundScreen:Image;
 		
 		public var sliderTrack:Image, sliderKnob:Image;
@@ -164,10 +164,14 @@ package Util
 			[Embed(source="../../assets/screens/controlsScreen.png")] var _50:Class;
 			controlsScreen = new Image(_50);
 			
+			
+			
 			[Embed(source="../../assets/screens/graphicsScreen.png")] var _51:Class;
 			graphicsScreen = new Image(_51);
 			
 			// introscreen removed
+			[Embed(source="../../assets/screens/foreGround.png")] var _52:Class;
+			foreScreen = new Image(_52);
 			
 			[Embed(source="../../assets/screens/mainMenuScreen.png")] var _53:Class;
 			mainMenuScreen = new Image(_53);
