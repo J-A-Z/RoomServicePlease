@@ -25,6 +25,7 @@ package Util
 			backOfSlide.y += 15;
 			addGraphic(backOfSlide);
 			addGraphic(slider);
+			lastMouseX = 0;
 		
 		}
 		
@@ -39,6 +40,18 @@ package Util
 					slider.x = lastMouseX - (x + 7); //Just used plus 7 because the slider is 15 pixels thick so when you drag it to 0 it will overlap the bar by about half of the slider.
 					
 				}
+			}
+		}
+		
+		public function getValuePercent():int
+		{
+			if (lastMouseX == 0)
+			{
+				return 0;
+			}
+			else
+			{
+				return 100 * ((lastMouseX - x) / 250) + 1;
 			}
 		}
 	

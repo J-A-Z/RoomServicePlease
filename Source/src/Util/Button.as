@@ -32,14 +32,16 @@ package Util
 		override public function update():void
 		{
 			
-			//collideRect(Input.mouseX, Input.mouseY, smallRec.x, smallRec.y, smallRec.width, smallRec.height)
+			
 			
 			if (smallRec.contains(Input.mouseX, Input.mouseY))
 			{
+				
 				addGraphic(imageHov);
 			}
 			else
 			{
+				
 				addGraphic(imageNeu);
 			}
 			if (Input.mousePressed)
@@ -52,6 +54,11 @@ package Util
 				
 			}
 			
+<<<<<<< HEAD
+=======
+			
+			
+>>>>>>> 4bc18b5e4d3d98050742bab06c502cc3dbe32e1a
 		}
 	}
 
