@@ -20,8 +20,8 @@ package Main
 		private var timer:int = 0;
 		private var barProgress:int = 0;
 		
-		[Embed(source="../../assets/screens/introScreen.png")] var img:Class;
-		private var introScreenImg:Image = new Image(img);
+		[Embed(source="../../assets/screens/introScreen.png")] private var screenImg:Class;
+		private var introScreenImg:Image = new Image(screenImg);
 		
 		public function IntroScreen() 
 		{
