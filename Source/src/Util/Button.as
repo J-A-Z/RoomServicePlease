@@ -53,12 +53,6 @@ package Util
 				}
 				
 			}
-			
-<<<<<<< HEAD
-=======
-			
-			
->>>>>>> 4bc18b5e4d3d98050742bab06c502cc3dbe32e1a
 		}
 	}
 
