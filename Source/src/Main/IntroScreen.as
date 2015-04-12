@@ -40,7 +40,7 @@ package Main
 				
 			if (barProgress < 125) {
 				
-				barProgress += 1;
+				barProgress += 10;
 				
 			}
 			
@@ -48,7 +48,7 @@ package Main
 				
 				if (barProgress < 250) {
 					
-					barProgress += 1;
+					barProgress += 10;
 					
 				}
 				
@@ -80,7 +80,7 @@ package Main
 				
 				timer++;
 				
-				if (timer >= 60 * 3) {
+				if (timer >= 60 * 1.5) {
 					
 					FP.world = GameEngine.mainMenu;
 					
