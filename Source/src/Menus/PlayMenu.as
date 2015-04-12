@@ -20,7 +20,6 @@ package Menus
 		public function PlayMenu() 
 		{
 			addGraphic(GameEngine.theLoader.playScreen, 0, 0, 0);
-			add(new PlayerHUD());
 		}
 		
 	}

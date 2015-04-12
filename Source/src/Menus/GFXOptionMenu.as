@@ -25,7 +25,6 @@ package Menus
 			if (slider != null)
 			{
 				volume = slider.getValuePercent();
-				trace( " " + slider.getValuePercent() + "%");
 			}
 			super.update();
 			
