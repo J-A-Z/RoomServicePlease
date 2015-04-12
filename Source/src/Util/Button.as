@@ -52,8 +52,6 @@ package Util
 				
 			}
 			
-			Draw.rect(smallRec.x, smallRec.y, smallRec.width, smallRec.height, 0xFFFFFF, 1, false);
-			
 		}
 	}
 

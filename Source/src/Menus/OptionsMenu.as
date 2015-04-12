@@ -17,9 +17,9 @@ package Menus
 		public function OptionsMenu() 
 		{
 			addGraphic(GameEngine.theLoader.optionsScreen, 0, 0, 0);
-			add(new Button(gfxOptionMenu, GameEngine.theLoader.graphicsButtonN, GameEngine.theLoader.graphicsButtonH, 304, 300, 30, 192));//Changed placement of buttons.
-			add(new Button(audioMenu, GameEngine.theLoader.soundButtonN, GameEngine.theLoader.soundButtonH, 304, 350, 30, 192));//They were at odd places.
-			add(new Button(keymapMenu, GameEngine.theLoader.controlsButtonN, GameEngine.theLoader.controlsButtonH, 304, 400, 30, 192));//Also added the images in the constructor for the neutral & hover.
+			add(new Button(gfxOptionMenu, GameEngine.theLoader.graphicsButtonN, GameEngine.theLoader.graphicsButtonH, 304, 300, 50, 250));//Changed placement of buttons.
+			add(new Button(audioMenu, GameEngine.theLoader.soundButtonN, GameEngine.theLoader.soundButtonH, 304, 350, 50, 250));//They were at odd places.
+			add(new Button(keymapMenu, GameEngine.theLoader.controlsButtonN, GameEngine.theLoader.controlsButtonH, 304, 400, 50, 250));//Also added the images in the constructor for the neutral & hover.
 		}
 		
 		private function gfxOptionMenu(): void 

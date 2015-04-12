@@ -62,6 +62,14 @@ package Main
 			
 			Draw.rect(0, FP.height - 10, barProgress * 3.2, 10, 0xFF0000);
 			
+			Draw.rect((250 - barProgress) * 3.2, 0, barProgress * 3.2, 10, 0xFF0000);
+			
+			Draw.rect(0, 0, 10, barProgress * 2.4, 0xFF0000);
+			
+			Draw.rect(FP.width - 10, (250 - barProgress) * 2.4, 10, barProgress * 2.4, 0xFF0000);
+			
+			
+			
 		}
 		
 		override public function update():void {

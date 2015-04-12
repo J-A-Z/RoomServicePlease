@@ -26,6 +26,8 @@ package Util
 		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
 		playScreen:Image, soundScreen:Image;
 		
+		public var sliderTrack:Image, sliderKnob:Image;
+		
 		private var imagesDone:Boolean = false;
 		private var soundsDone:Boolean = false;
 		private var menusDone:Boolean = false;
@@ -181,6 +183,14 @@ package Util
 			
 			[Embed(source="../../assets/screens/soundScreen.png")] var _57:Class;
 			soundScreen = new Image(_57);
+			
+			// Misc
+			
+			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _70:Class;
+			sliderTrack = new Image(_70);
+			
+			[Embed(source = "../../assets/slider/slider.png")] var _71:Class;
+			sliderKnob = new Image(_71);
 			
 			//////////////////////////////////////////////////////////////////
 			

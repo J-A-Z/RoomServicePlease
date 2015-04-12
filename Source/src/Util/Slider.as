@@ -3,18 +3,16 @@ package Util
 	import net.flashpunk.Entity;
 	import net.flashpunk.graphics.Image;
 	import net.flashpunk.utils.Input;
+	import Main.GameEngine;
 	
 	/**
 	 * @author Zach
 	 */
 	public class Slider extends Entity
 	{
-		[Embed(source="../../assets/slider/sliderBackGround.png")]
-		var backImage:Class;
-		public var backOfSlide:Image = new Image(backImage);
-		[Embed(source="../../assets/slider/slider.png")]
-		var sliderImage:Class;
-		public var slider:Image = new Image(sliderImage);
+		
+		public var backOfSlide:Image = GameEngine.theLoader.sliderTrack;
+		public var slider:Image = GameEngine.theLoader.sliderKnob;
 		
 		private var lastMouseX:int;
 		
