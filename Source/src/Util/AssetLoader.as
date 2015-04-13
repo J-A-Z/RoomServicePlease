@@ -28,6 +28,8 @@ package Util
 		
 		public var sliderTrack:Image, sliderKnob:Image;
 		
+		public var colliderChartOne:Class, levelMapOne:Class, tileChartOne:Class, tileSetOne:Class, entityChartOne:Class, entityMapOne:Class;
+		
 		private var imagesDone:Boolean = false;
 		private var soundsDone:Boolean = false;
 		private var menusDone:Boolean = false;
@@ -164,12 +166,9 @@ package Util
 			[Embed(source="../../assets/screens/controlsScreen.png")] var _50:Class;
 			controlsScreen = new Image(_50);
 			
-			
-			
 			[Embed(source="../../assets/screens/graphicsScreen.png")] var _51:Class;
 			graphicsScreen = new Image(_51);
 			
-			// introscreen removed
 			[Embed(source="../../assets/screens/foreGround.png")] var _52:Class;
 			foreScreen = new Image(_52);
 			
@@ -187,14 +186,34 @@ package Util
 			
 			[Embed(source="../../assets/screens/soundScreen.png")] var _57:Class;
 			soundScreen = new Image(_57);
+					
+			// Level One Images
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/colliderChartOne.png")] var _70:Class;
+			colliderChartOne = _70;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/levelMapOne.png")] var _71:Class;
+			levelMapOne = _71;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/tileChartOne.png")] var _72:Class;
+			tileChartOne = _72;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/tileSetOne32.png")] var _73:Class;
+			tileSetOne = _73;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/entityChartOne.png")] var _74:Class;
+			entityChartOne = _74;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/entityMapOne.png")] var _75:Class;
+			entityMapOne = _75;
 			
 			// Misc
 			
-			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _70:Class;
-			sliderTrack = new Image(_70);
+			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _100:Class;
+			sliderTrack = new Image(_100);
 			
-			[Embed(source = "../../assets/slider/slider.png")] var _71:Class;
-			sliderKnob = new Image(_71);
+			[Embed(source = "../../assets/slider/slider.png")] var _101:Class;
+			sliderKnob = new Image(_101);
 			
 			//////////////////////////////////////////////////////////////////
 			

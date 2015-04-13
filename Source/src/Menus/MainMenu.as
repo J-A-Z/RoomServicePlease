@@ -7,6 +7,7 @@ package Menus
 	import net.flashpunk.utils.Draw;
 	import Util.Button;
 	import Main.GameEngine;
+	import Worlds.Floors.FloorOne;
 	
 	/**
 	 * @author Zach
@@ -24,7 +25,9 @@ package Menus
 		}
 		
 		private function playMenu():void {
-			FP.world = GameEngine.playMenu;
+			//FP.world = GameEngine.playMenu;
+			
+			FP.world = new FloorOne;
 			
 		}
 		
