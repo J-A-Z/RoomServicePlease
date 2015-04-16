@@ -54,6 +54,14 @@ package Util
 				
 			}
 		}
+		
+		public function setX(valX:int):void {
+			this.x = valX;
+		}
+		
+		public function setImage(someImage:Image):void {
+			this.imageNeu = someImage;
+		}
 	}
 
 }
