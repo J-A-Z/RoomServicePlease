@@ -9,6 +9,7 @@ package Main
 	import Menus.MainMenu;
 	import Menus.ManagementMenu;
 	import Menus.OptionsMenu;
+	import Menus.PauseMenu;
 	import Menus.PlayMenu;
 	import net.flashpunk.Engine;
 	import net.flashpunk.FP;
@@ -39,6 +40,8 @@ package Main
 		public static var GFXOptionsMenu:GFXOptionMenu;
 		
 		public static var keymapMenu:KeymapMenu;
+		
+		public static var pauseMenu:PauseMenu;
 		
 		private var brightnessAlpha:Number = 0;
 		
