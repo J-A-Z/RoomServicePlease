@@ -23,10 +23,10 @@ package Util
 		
 		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS:Image;
 		
-		public var controlsScreen:Image, foreScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
+		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
 		playScreen:Image, soundScreen:Image;
 		
-		public var sliderTrack:Image, sliderKnob:Image;
+		public var volSliderTrack:Image, volSliderKnob:Image, brightSliderTrack:Image, brightSliderKnob:Image;
 		
 		public var colliderChartOne:Class, levelMapOne:Class, tileChartOne:Class, tileSetOne:Class, entityChartOne:Class, entityMapOne:Class;
 		
@@ -169,8 +169,7 @@ package Util
 			[Embed(source="../../assets/screens/graphicsScreen.png")] var _51:Class;
 			graphicsScreen = new Image(_51);
 			
-			[Embed(source="../../assets/screens/foreGround.png")] var _52:Class;
-			foreScreen = new Image(_52);
+			
 			
 			[Embed(source="../../assets/screens/mainMenuScreen.png")] var _53:Class;
 			mainMenuScreen = new Image(_53);
@@ -210,10 +209,16 @@ package Util
 			// Misc
 			
 			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _100:Class;
-			sliderTrack = new Image(_100);
+			volSliderTrack = new Image(_100);
 			
 			[Embed(source = "../../assets/slider/slider.png")] var _101:Class;
-			sliderKnob = new Image(_101);
+			volSliderKnob = new Image(_101);
+			
+			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _102:Class;
+			brightSliderTrack = new Image(_102);
+			
+			[Embed(source = "../../assets/slider/slider.png")] var _103:Class;
+			brightSliderKnob = new Image(_103);
 			
 			//////////////////////////////////////////////////////////////////
 			

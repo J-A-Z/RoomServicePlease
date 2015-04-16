@@ -11,13 +11,17 @@ package Util
 	public class Slider extends Entity
 	{
 		
-		public var backOfSlide:Image = GameEngine.theLoader.sliderTrack;
-		public var slider:Image = GameEngine.theLoader.sliderKnob;
+		private var backOfSlide:Image;
+		private var slider:Image;
 		
 		private var lastMouseX:int;
 		
-		public function Slider(someX:int, someY:int, someHeight:int, someWidth:int)
+		public function Slider(trackImg:Image, knobImg:Image, location:int, someX:int, someY:int, someHeight:int, someWidth:int)
 		{
+			
+			backOfSlide = trackImg;
+			slider = knobImg;
+			
 			this.x = someX;
 			this.y = someY;
 			this.height = someHeight;
@@ -27,6 +31,8 @@ package Util
 			addGraphic(slider);
 			lastMouseX = 0;
 		
+			slider.x += location;
+			
 		}
 		
 		override public function update():void
@@ -43,11 +49,11 @@ package Util
 			}
 		}
 		
-		public function getValuePercent():int
+		public function getValuePercent():Number
 		{
 			if (lastMouseX == 0)
 			{
-				return 0;
+				return 100;
 			}
 			else
 			{

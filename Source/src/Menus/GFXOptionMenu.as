@@ -5,37 +5,52 @@ package Menus
 	import Main.GameEngine;
 	import Util.Slider;
 	import net.flashpunk.utils.Draw;
+	import net.flashpunk.FP;
+	import Util.Button;
 	
 	/**
 	 * @author Amanda
 	 */
 	public class GFXOptionMenu extends World
 	{
-		private var slider:Slider;
-		private var brightness:int;
-		private var foreGround:Image;
+		private var brightnessSlider:Slider;
+		
 		public function GFXOptionMenu()
 		{
-			slider = new Slider(275, 350, 40, 250);
-			foreGround = GameEngine.theLoader.foreScreen;
-			foreGround.alpha = 0;
-			addGraphic(GameEngine.theLoader.graphicsScreen, 0, 0, 0);
-			add(slider);
-			addGraphic(foreGround, 0, 0, 0);
 			
+			brightnessSlider = new Slider(GameEngine.theLoader.brightSliderTrack, GameEngine.theLoader.brightSliderKnob, 243, 275, 350, 40, 250);
+			addGraphic(GameEngine.theLoader.graphicsScreen, 0, 0, 0);
+			add(brightnessSlider);
+			
+			add(new Button(pageBack, GameEngine.theLoader.backArrowN, GameEngine.theLoader.backArrowH, 50, 490, 60, 60));
 		
 		}
 		
 		override public function update():void
 		{
-			if (slider != null)
+			if (brightnessSlider != null)
 			{
-				brightness = slider.getValuePercent();
-				foreGround.alpha = brightness / 200;
+				
+				var brightness:Number = ((100 - brightnessSlider.getValuePercent()) / 2) / 100;
+				
+				if (brightness <= 0) {
+					brightness = 0;
+				}
+				
+				GameEngine.instance.setBrightness(brightness);
+				
 			}
+			
 			super.update();
 			
 		}
+		
+		private function pageBack():void {
+			
+			FP.world = GameEngine.optionsMenu;
+			
+		}
+		
 	}
 
 }

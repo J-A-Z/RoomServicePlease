@@ -18,10 +18,12 @@ package Menus
 		{
 			addGraphic(GameEngine.theLoader.optionsScreen, 0, 0, 0);
 
-			add(new Button(gfxOptionMenu, GameEngine.theLoader.graphicsButtonN, GameEngine.theLoader.graphicsButtonH, 300, 300, 50, 200));//Changed placement of buttons.
-			add(new Button(audioMenu, GameEngine.theLoader.soundButtonN, GameEngine.theLoader.soundButtonH, 300, 350, 50, 200));//They were at odd places.
-			add(new Button(keymapMenu, GameEngine.theLoader.controlsButtonN, GameEngine.theLoader.controlsButtonH, 300, 400, 50, 200));//Also added the images in the constructor for the neutral & hover.
+			add(new Button(gfxOptionMenu, GameEngine.theLoader.graphicsButtonN, GameEngine.theLoader.graphicsButtonH, FP.halfWidth - 100, FP.halfHeight - 100, 50, 200));//Changed placement of buttons.
+			add(new Button(audioMenu, GameEngine.theLoader.soundButtonN, GameEngine.theLoader.soundButtonH, FP.halfWidth - 100, FP.halfHeight, 50, 200));//They were at odd places.
+			add(new Button(keymapMenu, GameEngine.theLoader.controlsButtonN, GameEngine.theLoader.controlsButtonH, FP.halfWidth - 100, FP.halfHeight + 100, 50, 200));//Also added the images in the constructor for the neutral & hover.
 
+			add(new Button(pageBack, GameEngine.theLoader.backArrowN, GameEngine.theLoader.backArrowH, 50, 490, 60, 60));
+			
 		}
 		
 		private function gfxOptionMenu(): void 
@@ -38,6 +40,13 @@ package Menus
 		{
 			FP.world = GameEngine.keymapMenu;
 		}
+		
+		private function pageBack():void {
+			
+			FP.world = GameEngine.mainMenu;
+			
+		}
+		
 	}
 
 }

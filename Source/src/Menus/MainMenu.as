@@ -25,9 +25,9 @@ package Menus
 		}
 		
 		private function playMenu():void {
-			//FP.world = GameEngine.playMenu;
+			FP.world = GameEngine.playMenu;
 			
-			FP.world = new FloorOne;
+			
 			
 		}
 		
