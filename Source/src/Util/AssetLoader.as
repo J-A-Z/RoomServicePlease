@@ -24,11 +24,13 @@ package Util
 		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS:Image;
 		
 		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
-		playScreen:Image, soundScreen:Image;
+		playScreen:Image, soundScreen:Image, pauseScreen:Image;
 		
 		public var volSliderTrack:Image, volSliderKnob:Image, brightSliderTrack:Image, brightSliderKnob:Image;
 		
 		public var colliderChartOne:Class, levelMapOne:Class, tileChartOne:Class, tileSetOne:Class, entityChartOne:Class, entityMapOne:Class;
+		
+		public var brightnessLabel:Image, volumeLabel:Image;
 		
 		private var imagesDone:Boolean = false;
 		private var soundsDone:Boolean = false;
@@ -185,6 +187,9 @@ package Util
 			
 			[Embed(source="../../assets/screens/soundScreen.png")] var _57:Class;
 			soundScreen = new Image(_57);
+			
+			[Embed(source="../../assets/screens/pausedScreen.png")] var _58:Class;
+			pauseScreen = new Image(_58);
 					
 			// Level One Images
 			
@@ -219,6 +224,12 @@ package Util
 			
 			[Embed(source = "../../assets/slider/slider.png")] var _103:Class;
 			brightSliderKnob = new Image(_103);
+			
+			[Embed(source = "../../assets/brightnessLabel.png")] var _104:Class;
+			brightnessLabel = new Image(_104);
+			
+			[Embed(source = "../../assets/volumeLabel.png")] var _105:Class;
+			volumeLabel = new Image(_105);
 			
 			//////////////////////////////////////////////////////////////////
 			
