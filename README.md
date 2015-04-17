@@ -1,6 +1,6 @@
 # RoomServicePlease
-CSC 301
-Group Members: Joe Marchesi, Zach Ward, Amanda Alvarez
+* CSC 301
+* Group Members: Joe Marchesi, Zach Ward, Amanda Alvarez
 
 Product Overview
 ----------------
@@ -19,16 +19,18 @@ Software Requirements
 ---------------------
 Operating System for testing environment: Windows Vista, 7, 8, or 8.1
 
-Software          	Version	       Source                     	Description
-Flash Develop	      4.4.1	         http://flashdevelop.org	    The IDE used to program the software.
-Adobe Flash Player	17.0.0.134	   http://adobe.com	            For being able to run and test the software.
-Adobe Flex SDK	    4.6	           http://adobe.com	            The developer tools to compile actionscript 3 code.
+Software Tools:
+  **Software         	- Version	      - Source                     	  - Description**
+- Flash Develop	      - 4.4.1	        - http://flashdevelop.org	      - The IDE used to program the software.
+- Adobe Flash Player	- 17.0.0.134	  - http://adobe.com	            - For being able to run and test the software.
+- Adobe Flex SDK	    - 4.6	          - http://adobe.com	            - The developer tools to compile actionscript 3 code.
 
 
 Accessing the Prototype
 -----------------------
 From the J-A-Z RoomServicePlease repository page, download the .ZIP file, save to computer, and extract the files. 
 If using GitBash or the command line, the cloning URL is: https://github.com/J-A-Z/RoomServicePlease.git
+
 To begin, ensure that the software requirements are met before continuing. Once these conditions have been met, 
 open the Flash Develop application. On the right-hand side of the application are options to "Create a new project"
 or "Open an existing project" or "Import a Flex Builder project." Select "Open an existing project" and locate the 
