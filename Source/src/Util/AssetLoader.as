@@ -7,6 +7,7 @@ package Util
 	import Menus.ManagementMenu;
 	import Menus.OptionsMenu;
 	import Menus.PlayMenu;
+	import Menus.PausedMenu;
 	import net.flashpunk.graphics.Image;
 	import Main.GameEngine;
 	
@@ -266,6 +267,8 @@ package Util
 			GameEngine.GFXOptionsMenu = new GFXOptionMenu;
 			
 			GameEngine.keymapMenu = new KeymapMenu;
+			
+			GameEngine.pauseMenu = new PausedMenu;
 			
 			//////////////////////////////////////////////////////////////////
 			

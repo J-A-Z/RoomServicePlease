@@ -14,6 +14,8 @@ package Menus
 	public class OptionsMenu extends World
 	{
 		
+		private var previousMenu:World = GameEngine.mainMenu;
+		
 		public function OptionsMenu() 
 		{
 			addGraphic(GameEngine.theLoader.optionsScreen, 0, 0, 0);
@@ -43,7 +45,13 @@ package Menus
 		
 		private function pageBack():void {
 			
-			FP.world = GameEngine.mainMenu;
+			FP.world = previousMenu;
+			
+		}
+		
+		public function setPreviousMenu(someMenu:World):void {
+			
+			previousMenu = someMenu;
 			
 		}
 		

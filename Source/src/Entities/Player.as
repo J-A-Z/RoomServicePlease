@@ -6,6 +6,7 @@ package Entities
 	import net.flashpunk.utils.Key;
 	import net.flashpunk.FP;
 	import net.flashpunk.utils.Draw;
+	import Main.GameEngine;
 	
 	/**
 	 * ...
@@ -99,6 +100,14 @@ package Entities
 			if (x > FP.halfWidth && x < level.right - FP.halfWidth) {
 				
 				FP.camera.x = x - FP.halfWidth;
+			}
+			
+			if (Input.check(Key.P)) {
+				
+				GameEngine.pauseMenu.setWorld(FP.world);
+				
+				FP.world = GameEngine.pauseMenu;
+				
 			}
 			
 		}

@@ -25,18 +25,21 @@ package Menus
 		}
 		
 		private function playMenu():void {
+			
 			FP.world = GameEngine.playMenu;
-			
-			
 			
 		}
 		
 		private function optionsMenu():void {
-			FP.world = GameEngine.optionsMenu
+			
+			FP.world = GameEngine.optionsMenu;
+			
+			GameEngine.optionsMenu.setPreviousMenu(this);
 			
 		}
 		
 		private function managementMenu():void {
+			
 			FP.world = GameEngine.managementMenu;
 			
 		}

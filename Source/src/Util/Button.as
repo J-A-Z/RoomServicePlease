@@ -37,12 +37,15 @@ package Util
 			if (smallRec.contains(Input.mouseX, Input.mouseY))
 			{
 				
-				addGraphic(imageHov);
+				graphic = imageHov;
+				
+				//addGraphic(imageHov);
 			}
 			else
 			{
 				
-				addGraphic(imageNeu);
+				graphic = imageNeu;
+				
 			}
 			if (Input.mousePressed)
 			{
@@ -57,10 +60,12 @@ package Util
 		
 		public function setX(valX:int):void {
 			this.x = valX;
+			smallRec.x = valX + 10;
 		}
 		
-		public function setImage(someImage:Image):void {
-			this.imageNeu = someImage;
+		public function setImages(someNeutralImage:Image, someHoveredImage:Image):void {
+			this.imageNeu = someNeutralImage;
+			this.imageHov = someHoveredImage;
 		}
 	}
 
