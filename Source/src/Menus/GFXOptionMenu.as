@@ -19,8 +19,10 @@ package Menus
 		{
 			
 			brightnessSlider = new Slider(GameEngine.theLoader.brightSliderTrack, GameEngine.theLoader.brightSliderKnob, 243, 275, 350, 40, 250);
+			brightnessSlider.setTextImage(GameEngine.theLoader.brightnessLabel);
 			addGraphic(GameEngine.theLoader.graphicsScreen, 0, 0, 0);
 			add(brightnessSlider);
+			
 			
 			add(new Button(pageBack, GameEngine.theLoader.backArrowN, GameEngine.theLoader.backArrowH, 50, 490, 60, 60));
 		

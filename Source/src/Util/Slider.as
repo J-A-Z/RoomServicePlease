@@ -13,6 +13,7 @@ package Util
 		
 		private var backOfSlide:Image;
 		private var slider:Image;
+		private var textImage:Image;
 		
 		private var lastMouseX:int;
 		
@@ -59,6 +60,13 @@ package Util
 			{
 				return 100 * ((lastMouseX - x) / 250) + 1;
 			}
+		}
+		
+		public function setTextImage(someImage:Image):void {
+			textImage = someImage;
+			textImage.x += 25;
+			textImage.y -= 75;
+			addGraphic(textImage);
 		}
 	
 	}

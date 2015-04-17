@@ -18,6 +18,7 @@ package Menus
 		{
 			
 			volumeSlider = new Slider(GameEngine.theLoader.volSliderTrack, GameEngine.theLoader.volSliderKnob, 125, 275, 350, 40, 250);
+			volumeSlider.setTextImage(GameEngine.theLoader.volumeLabel);
 			addGraphic(GameEngine.theLoader.soundScreen, 0, 0, 0);
 			add(volumeSlider);
 			
