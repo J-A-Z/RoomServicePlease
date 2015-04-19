@@ -12,8 +12,9 @@ package Util
 	public class Slider extends Entity
 	{
 		
-		public var backOfSlide:Image = GameEngine.theLoader.sliderTrack;//Assigns the image of the slider track to backOfSlide
-		public var slider:Image = GameEngine.theLoader.sliderKnob;//Assigns the sliderKnob to slider
+		private var backOfSlide:Image;//Declares the slider track
+		private var slider:Image;//Declares the slider knob
+		private var textImage:Image;//Declares the Text image that appears over the slider
 		
 		private var lastMouseX:int;//Holds the mouse's last X value
 		
@@ -24,8 +25,12 @@ package Util
 		 * @param	someHeight
 		 * @param	someWidth
 		 */
-		public function Slider(someX:int, someY:int, someHeight:int, someWidth:int)
+		public function Slider(trackImg:Image, knobImg:Image, location:int, someX:int, someY:int, someHeight:int, someWidth:int)
 		{
+			
+			backOfSlide = trackImg;//Assigns trackImg to backOfSlide
+			slider = knobImg;//Assigns knobImg to slider
+			
 			this.x = someX;//Sets the Entities X value to someX
 			this.y = someY;//Sets the Entities Y value to someY
 			this.height = someHeight;//Sets the Entities height value to someHeight
@@ -34,7 +39,8 @@ package Util
 			addGraphic(backOfSlide);//Add the back of the slider to appear on screen
 			addGraphic(slider);//Add the slider to appear on screen
 			lastMouseX = 0;//Set the last X position of the mouse to 0
-		
+			slider.x += location;//Adds location to the slider's x position
+			
 		}
 		
 		/**
@@ -55,19 +61,29 @@ package Util
 		}
 		
 		/**
-		 * This returns and integer value. It finds what percentage of the slider track the slider is up and then returns that percentage as an int.
+		 * This returns a number value. It finds what percentage of the slider track the slider is up and then returns that percentage as a number.
 		 * @return
 		 */
-		public function getValuePercent():int
+		public function getValuePercent():Number
 		{
-			if (lastMouseX == 0)//If lastMouseX = 0 then return 0
+			if (lastMouseX == 0)//If lastMouseX = 0 then return 100
 			{
-				return 0;
+				return 100;
 			}
 			else
 			{
-				return 100 * ((lastMouseX - x) / 250) + 1;//Else return the percentage of the slider track the the slider is up.
+				return 100 * ((lastMouseX - x) / 250) + 1;//Else return the percentage of the slider track that the slider is up.
 			}
+		}
+		/**
+		 * Sets the Text Image to a specific location above the slider
+		 * @param	someImage
+		 */
+		public function setTextImage(someImage:Image):void {
+			textImage = someImage;//Assigns someImage to textImage
+			textImage.x += 25;//Adds 25 to the x position
+			textImage.y -= 75;//Subtracts 75 from the y position
+			addGraphic(textImage);//Adds the image
 		}
 	
 	}

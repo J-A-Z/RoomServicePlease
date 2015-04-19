@@ -7,6 +7,7 @@ package Util
 	import Menus.ManagementMenu;
 	import Menus.OptionsMenu;
 	import Menus.PlayMenu;
+	import Menus.PausedMenu;
 	import net.flashpunk.graphics.Image;
 	import Main.GameEngine;
 	
@@ -23,10 +24,14 @@ package Util
 		
 		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS:Image;
 		
-		public var controlsScreen:Image, foreScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
-		playScreen:Image, soundScreen:Image;
+		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
+		playScreen:Image, soundScreen:Image, pauseScreen:Image;
 		
-		public var sliderTrack:Image, sliderKnob:Image;
+		public var volSliderTrack:Image, volSliderKnob:Image, brightSliderTrack:Image, brightSliderKnob:Image;
+		
+		public var colliderChartOne:Class, levelMapOne:Class, tileChartOne:Class, tileSetOne:Class, entityChartOne:Class, entityMapOne:Class;
+		
+		public var brightnessLabel:Image, volumeLabel:Image;
 		
 		private var imagesDone:Boolean = false;
 		private var soundsDone:Boolean = false;
@@ -164,14 +169,10 @@ package Util
 			[Embed(source="../../assets/screens/controlsScreen.png")] var _50:Class;
 			controlsScreen = new Image(_50);
 			
-			
-			
 			[Embed(source="../../assets/screens/graphicsScreen.png")] var _51:Class;
 			graphicsScreen = new Image(_51);
 			
-			// introscreen removed
-			[Embed(source="../../assets/screens/foreGround.png")] var _52:Class;
-			foreScreen = new Image(_52);
+			
 			
 			[Embed(source="../../assets/screens/mainMenuScreen.png")] var _53:Class;
 			mainMenuScreen = new Image(_53);
@@ -188,13 +189,48 @@ package Util
 			[Embed(source="../../assets/screens/soundScreen.png")] var _57:Class;
 			soundScreen = new Image(_57);
 			
+			[Embed(source="../../assets/screens/pausedScreen.png")] var _58:Class;
+			pauseScreen = new Image(_58);
+					
+			// Level One Images
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/colliderChartOne.png")] var _70:Class;
+			colliderChartOne = _70;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/levelMapOne.png")] var _71:Class;
+			levelMapOne = _71;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/tileChartOne.png")] var _72:Class;
+			tileChartOne = _72;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/tileSetOne32.png")] var _73:Class;
+			tileSetOne = _73;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/entityChartOne.png")] var _74:Class;
+			entityChartOne = _74;
+			
+			[Embed(source = "../../assets/levelCharts/levelOne/entityMapOne.png")] var _75:Class;
+			entityMapOne = _75;
+			
 			// Misc
 			
-			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _70:Class;
-			sliderTrack = new Image(_70);
+			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _100:Class;
+			volSliderTrack = new Image(_100);
 			
-			[Embed(source = "../../assets/slider/slider.png")] var _71:Class;
-			sliderKnob = new Image(_71);
+			[Embed(source = "../../assets/slider/slider.png")] var _101:Class;
+			volSliderKnob = new Image(_101);
+			
+			[Embed(source = "../../assets/slider/sliderBackGround.png")] var _102:Class;
+			brightSliderTrack = new Image(_102);
+			
+			[Embed(source = "../../assets/slider/slider.png")] var _103:Class;
+			brightSliderKnob = new Image(_103);
+			
+			[Embed(source = "../../assets/brightnessLabel.png")] var _104:Class;
+			brightnessLabel = new Image(_104);
+			
+			[Embed(source = "../../assets/volumeLabel.png")] var _105:Class;
+			volumeLabel = new Image(_105);
 			
 			//////////////////////////////////////////////////////////////////
 			
@@ -231,6 +267,8 @@ package Util
 			GameEngine.GFXOptionsMenu = new GFXOptionMenu;
 			
 			GameEngine.keymapMenu = new KeymapMenu;
+			
+			GameEngine.pauseMenu = new PausedMenu;
 			
 			//////////////////////////////////////////////////////////////////
 			

@@ -20,8 +20,8 @@ package Main
 		private var timer:int = 0;
 		private var barProgress:int = 0;
 		
-		[Embed(source="../../assets/screens/introScreen.png")] var img:Class;
-		private var introScreenImg:Image = new Image(img);
+		[Embed(source="../../assets/screens/introScreen.png")] private var screenImg:Class;
+		private var introScreenImg:Image = new Image(screenImg);
 		
 		public function IntroScreen() 
 		{
@@ -40,7 +40,7 @@ package Main
 				
 			if (barProgress < 125) {
 				
-				barProgress += 10;
+				barProgress += 5;
 				
 			}
 			
@@ -48,7 +48,7 @@ package Main
 				
 				if (barProgress < 250) {
 					
-					barProgress += 10;
+					barProgress += 5;
 					
 				}
 				
@@ -60,15 +60,17 @@ package Main
 				
 			}
 			
-			Draw.rect(0, FP.height - 10, barProgress * 3.2, 10, 0xFF0000);
+			var barPercent:Number = barProgress / 250;
 			
-			Draw.rect((250 - barProgress) * 3.2, 0, barProgress * 3.2, 10, 0xFF0000);
+			//Draw.rect(0, FP.height - 10, barProgress * 3.2, 10, 0xFF0000);
 			
-			Draw.rect(0, 0, 10, barProgress * 2.4, 0xFF0000);
+			//Draw.rect((250 - barProgress) * 3.2, 0, barProgress * 3.2, 10, 0xFF0000);
 			
-			Draw.rect(FP.width - 10, (250 - barProgress) * 2.4, 10, barProgress * 2.4, 0xFF0000);
+			//Draw.rect(0, 0, 10, barProgress * 2.4, 0xFF0000);
 			
+			//Draw.rect(FP.width - 10, (250 - barProgress) * 2.4, 10, barProgress * 2.4, 0xFF0000);
 			
+			Draw.rect(FP.halfWidth - 160 + (barPercent * 320), 340, 320 - (barPercent * 320) , 100, 0x000000);
 			
 		}
 		

@@ -16,7 +16,11 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
+<<<<<<< HEAD
       <value>'4/19/2015'</value>
+=======
+      <value>'4/17/2015'</value>
+>>>>>>> e43e2937c2a15f07aef6f89d6b6173c7c739edc8
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -32,12 +36,20 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
+<<<<<<< HEAD
       <path-element>C:\Users\ZDUB\Documents\GitHub\RoomServicePlease\Source\src</path-element>
+=======
+      <path-element>C:\Users\Funkyman\Documents\GitHub\RoomServicePlease\Source\src</path-element>
+>>>>>>> e43e2937c2a15f07aef6f89d6b6173c7c739edc8
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
+<<<<<<< HEAD
     <path-element>C:\Users\ZDUB\Documents\GitHub\RoomServicePlease\Source\src\Main\GameEngine.as</path-element>
+=======
+    <path-element>C:\Users\Funkyman\Documents\GitHub\RoomServicePlease\Source\src\Main\GameEngine.as</path-element>
+>>>>>>> e43e2937c2a15f07aef6f89d6b6173c7c739edc8
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>

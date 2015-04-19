@@ -5,6 +5,8 @@ package Menus
 	import Main.GameEngine;
 	import Util.Slider;
 	import net.flashpunk.utils.Draw;
+	import net.flashpunk.FP;
+	import Util.Button;
 	
 	/**
 	 * @author Amanda
@@ -12,22 +14,19 @@ package Menus
 	 */
 	public class GFXOptionMenu extends World
 	{
-		private var slider:Slider;//Creates a slider
-		private var brightness:int;//Creates a brightness integer variable
-		private var foreGround:Image;//Creates a foreGround image variable
-		
+		private var brightnessSlider:Slider;
 		/**
-		 * The constructor sets up the slider, foreGround and adds the background image, the slider and the foreground to the world.
+		 * The constructor sets up the slider and adds the background image.
 		 */
 		public function GFXOptionMenu()
 		{
-			slider = new Slider(275, 350, 40, 250);//Slider will be placed at 275,350 and will be 250 wide and 40 high.
-			foreGround = GameEngine.theLoader.foreScreen;//Gets the foreGround screen
-			foreGround.alpha = 0;//Sets the opacity to 0
-			addGraphic(GameEngine.theLoader.graphicsScreen, 0, 0, 0);//Adds the background
-			add(slider);//Adds the slider image
-			addGraphic(foreGround, 0, 0, 0);//Then adds the foreGround
 			
+			brightnessSlider = new Slider(GameEngine.theLoader.brightSliderTrack, GameEngine.theLoader.brightSliderKnob, 243, 275, 350, 40, 250);//Sets up the slider
+			brightnessSlider.setTextImage(GameEngine.theLoader.brightnessLabel);//Sets up the Slider's Text Image
+			addGraphic(GameEngine.theLoader.graphicsScreen, 0, 0, 0);//Adds the Background to the world
+			add(brightnessSlider);//Adds the brightness slider
+			
+			add(new Button(pageBack, GameEngine.theLoader.backArrowN, GameEngine.theLoader.backArrowH, 50, 490, 60, 60));//Adds a back Arrow
 		
 		}
 		
@@ -36,14 +35,32 @@ package Menus
 		 */
 		override public function update():void
 		{
-			if (slider != null)//If slider is not null
-			{
-				brightness = slider.getValuePercent();//Get the percentage of the slider
-				foreGround.alpha = brightness / 200;//Brightness is divided by 200 so that the opacity will never be more than .5
-			}
 			super.update();//Perform normal update functions
+			if (brightnessSlider != null)//If brightness slider is not null
+			{
+				
+				var brightness:Number = ((100 - brightnessSlider.getValuePercent()) / 2) / 100;//Get the percentage of the slider and assign that value to brightness
+				
+				if (brightness <= 0) {//If brightness is less than or equal to 0 then brightness = 0
+					brightness = 0;
+				}
+				
+				GameEngine.instance.setBrightness(brightness);//Sets the Brightness for all worlds
+				
+			}
+			
+			super.update();//Performs the normal update functions
 			
 		}
+		/**
+		 * This method will move back to the previous menu when the back button is pressed
+		 */
+		private function pageBack():void {
+			
+			FP.world = GameEngine.optionsMenu;//Changes to the options menu
+			
+		}
+		
 	}
 
 }

@@ -9,16 +9,21 @@ package Main
 	import Menus.MainMenu;
 	import Menus.ManagementMenu;
 	import Menus.OptionsMenu;
+	import Menus.PausedMenu;
 	import Menus.PlayMenu;
 	import net.flashpunk.Engine;
 	import net.flashpunk.FP;
+	import net.flashpunk.graphics.Image;
 	import Util.AssetLoader;
+	import net.flashpunk.utils.Draw;
 	
 	
 	/**
 	 * @author Joe
 	 */
 	public class GameEngine extends Engine {
+		
+		public static var instance:GameEngine;
 		
 		public static var theLoader:AssetLoader;
 		
@@ -36,9 +41,15 @@ package Main
 		
 		public static var keymapMenu:KeymapMenu;
 		
+		public static var pauseMenu:PausedMenu;
+		
+		private var brightnessAlpha:Number = 0;
+		
 		public function GameEngine() {
 			
 			super(800, 600, 60, false);
+			
+			instance = this;
 			
 			theLoader = new AssetLoader;
 			
@@ -49,6 +60,21 @@ package Main
 			trace("successful start. Init");
 			
 			FP.world = new IntroScreen();
+			
+		}
+		
+		override public function render():void {
+			
+			super.render();
+			
+			Draw.rect(0, 0, 10000, 600, 0x000000, brightnessAlpha);
+			
+			
+		}
+		
+		public function setBrightness(value:Number):void {
+			
+			brightnessAlpha = value;
 			
 		}
 		

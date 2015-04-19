@@ -1,6 +1,7 @@
 package Worlds.Floors 
 {
 	import net.flashpunk.World;
+	import Worlds.Levels.FloorOneLevel;
 	/**
 	 * @author Joe
 	 */
@@ -9,6 +10,8 @@ package Worlds.Floors
 		
 		public function FloorOne() 
 		{
+			
+			add (new FloorOneLevel);
 			
 		}
 		
