@@ -17,6 +17,8 @@ package Util
 	public class AssetLoader
 	{
 		
+		//All the images used for this program will be declared here. 
+		
 		public var backArrowH:Image, backArrowN:Image, bugButtonH:Image, bugButtonN:Image, controlsButtonH:Image, controlsButtonN:Image, 
 		deleteButtonH:Image, deleteButtonN:Image, graphicsButtonH:Image, graphicsButtonN:Image, managementButtonH:Image, managementButtonN:Image, 
 		menuButtonH:Image, menuButtonN:Image, optionsButtonH:Image, optionsButtonN:Image, playButtonH:Image, playButtonN:Image, saveButtonH:Image, 
@@ -37,10 +39,17 @@ package Util
 		private var soundsDone:Boolean = false;
 		private var menusDone:Boolean = false;
 		
+		/**
+		 * Constructor to create all of the assests for the game. 
+		 */
 		public function AssetLoader()
 		{
 		}
 		
+		
+		/**
+		 * Function to load all of the assests. 
+		 */
 		public function load():void
 		{
 			
@@ -52,6 +61,10 @@ package Util
 		
 		}
 		
+		
+		/**
+		 * The images are loaded in this function uses the images found in the assests folder. 
+		 */
 		private function loadImages():void
 		{
 			
@@ -238,6 +251,10 @@ package Util
 		
 		}
 		
+		
+		/**
+		 * When sounds are created, they will be placed in the assests folder and loaded in this function below. 
+		 */ 
 		private function loadSounds():void
 		{
 			
@@ -249,6 +266,10 @@ package Util
 		
 		}
 		
+		
+		/**
+		 * Instantiates all of the menus for the game. 
+		 */
 		private function loadMenus():void
 		{
 			
@@ -276,6 +297,11 @@ package Util
 		
 		}
 		
+		/**
+		 * Checks to make sure everything has been loaded properly using the booleans made in the 
+		 * previous functions.
+		 * @return
+		 */
 		public function progress():int
 		{
 			
