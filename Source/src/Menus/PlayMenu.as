@@ -13,7 +13,7 @@ package Menus
 	
 	/**
 	 * @author Amanda
-	 *This class creates teh play menu.
+	 *This class creates the play menu.
 	 */
 	
 	public class PlayMenu extends World
