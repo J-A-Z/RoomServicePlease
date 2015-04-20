@@ -1,4 +1,4 @@
-package Util 
+package net.flashpunk.utils 
 {
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;

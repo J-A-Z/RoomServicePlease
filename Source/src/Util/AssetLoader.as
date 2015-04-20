@@ -12,6 +12,7 @@ package Util
 	import Main.GameEngine;
 	
 	/**
+	 * The assetLoader class will load all images, sounds and public worlds for the game. These will then be accessed by other classes through this class.
 	 * @author Joe
 	 */
 	public class AssetLoader
@@ -19,28 +20,35 @@ package Util
 		
 		//All the images used for this program will be declared here. 
 		
+		// Button Images
 		public var backArrowH:Image, backArrowN:Image, bugButtonH:Image, bugButtonN:Image, controlsButtonH:Image, controlsButtonN:Image, 
 		deleteButtonH:Image, deleteButtonN:Image, graphicsButtonH:Image, graphicsButtonN:Image, managementButtonH:Image, managementButtonN:Image, 
 		menuButtonH:Image, menuButtonN:Image, optionsButtonH:Image, optionsButtonN:Image, playButtonH:Image, playButtonN:Image, saveButtonH:Image, 
 		saveButtonN:Image, soundButtonH:Image, soundButtonN:Image, tutorialButtonH:Image, tutorialButtonN:Image, updateButtonH:Image, updateButtonN:Image;
 		
+		// File Button Images.
 		public var fileOneH:Image, fileOneN:Image, fileOneS:Image, fileTwoH:Image, fileTwoN:Image, fileTwoS:Image, fileThreeH:Image, fileThreeN:Image, fileThreeS:Image;
 		
+		// Screen Images
 		public var controlsScreen:Image, graphicsScreen:Image, introScreen:Image, mainMenuScreen:Image, managementScreen:Image, optionsScreen:Image, 
 		playScreen:Image, soundScreen:Image, pauseScreen:Image;
 		
+		// Slider Images
 		public var volSliderTrack:Image, volSliderKnob:Image, brightSliderTrack:Image, brightSliderKnob:Image;
 		
+		// Level One Images
 		public var colliderChartOne:Class, levelMapOne:Class, tileChartOne:Class, tileSetOne:Class, entityChartOne:Class, entityMapOne:Class;
 		
+		// Slider Label Images
 		public var brightnessLabel:Image, volumeLabel:Image;
 		
+		// Booleans to keep track of the progress
 		private var imagesDone:Boolean = false;
 		private var soundsDone:Boolean = false;
 		private var menusDone:Boolean = false;
 		
 		/**
-		 * Constructor to create all of the assests for the game. 
+		 * Default constructor
 		 */
 		public function AssetLoader()
 		{
@@ -48,7 +56,7 @@ package Util
 		
 		
 		/**
-		 * Function to load all of the assests. 
+		 * The load function will be called by the introScreen and will begin the initialization of all of the assets
 		 */
 		public function load():void
 		{
@@ -63,7 +71,7 @@ package Util
 		
 		
 		/**
-		 * The images are loaded in this function uses the images found in the assests folder. 
+		 * All images in the program are initialized in this function.
 		 */
 		private function loadImages():void
 		{
