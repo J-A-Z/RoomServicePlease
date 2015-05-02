@@ -7,6 +7,7 @@ package Entities
 	import net.flashpunk.FP;
 	import net.flashpunk.utils.Draw;
 	import Main.GameEngine;
+	import Util.InputHandler;
 	
 	/**
 	 * The Player class defines the entity that the user will control when playing the game. The player will move according to the inputs received from the InputHandler class.
@@ -21,6 +22,7 @@ package Entities
 		 */
 		[Embed(source="../../assets/playerPlaceholder.png")] private const PLAYER_IMG:Class;
 		
+		
 		/**
 		 * Variables used to alter players speed and movement.
 		 */
@@ -31,6 +33,7 @@ package Entities
 		private var xSpeed:Number = 0;
 		private var ySpeed:Number = 0;
 		private var gravity:Number = 0.9;
+		
 		
 		/**
 		 * Variables that manage the players health and regeneration.
@@ -47,8 +50,9 @@ package Entities
 		private var stunCounter:Number = 0;
 		private var hit:Boolean = false;
 		
-		/**
-		 * The default constructor gets no parameters and assigns the graphic for the player, gives it a name and a hitbox and sets its display layer to be closer to the top.
+		var inputs:InputHandler;
+		
+		 /** The default constructor gets no parameters and assigns the graphic for the player, gives it a name and a hitbox and sets its display layer to be closer to the top.
 		 */
 		public function Player() {
 			
@@ -59,6 +63,7 @@ package Entities
 			setHitbox(32, 32);
 			
 			layer = -2;
+			inputs = new InputHandler(this);
 			
 		}
 		
@@ -71,41 +76,7 @@ package Entities
 			return curHealth;
 		}
 		
-		/**
-		 * The move function will be called every update tick and will change the players location on the screen depending on the user inputs. This function will make sure the player 
-		 * will fall due to gravity and move at the right pace.
-		 * 
-		 */
-		public function move():void {
-			
-			// Temporary input checks. This will be done by the input handler in the future.
-			
-			var pressed:Boolean = false;
-			
-			if (Input.check(Key.A)) {
-				xSpeed-=power;
-				pressed=true;
-			}
-			if (Input.check(Key.D)) {
-				xSpeed+=power;
-				pressed=true;
-			}
-			if (collide("level",x,y+1)) {
-				ySpeed=0;
-				if (Input.check(Key.SPACE)) {
-					ySpeed-=jumpPower;
-				}
-			} else {
-				ySpeed+=gravity;
-			}
-			if (Math.abs(xSpeed)<1&&! pressed) {
-				xSpeed=0;
-			}
-			xSpeed*=hFriction;
-			ySpeed *= vFriction;
-			
-			moveBy(xSpeed, ySpeed, "level");
-		}
+		
 		
 		/**
 		 * The updateHealth function will be called every tick that the player updates. This will calculate the players health and regen the health if needed. 
@@ -128,7 +99,7 @@ package Entities
 		 */
 		override public function update():void {
 				
-			move();
+			inputs.move();
 			
 			updateHealth();
 			

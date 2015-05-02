@@ -8,6 +8,7 @@ package Worlds.Levels
 	import net.flashpunk.FP;
 	import net.flashpunk.utils.LevelEditor;
 	import Entities.Player;
+	import Util.InputHandler;
 	
 	/**
 	 * The FloorOneLevel defines the level for the first world. This class will make use of the LevelEditor class in Flashpunk to convert bitmaps and tile graphics
@@ -24,7 +25,7 @@ package Worlds.Levels
 		private var colliderChart:Class = GameEngine.theLoader.colliderChartOne;
 		private var entityChart:Class = GameEngine.theLoader.entityChartOne;
 		private var entityMap:Class = GameEngine.theLoader.entityMapOne;
-		
+		private var inputs:InputHandler;
 		/**
 		 * The default constructor will give the level a type to be used when collisions are being tested.
 		 */
