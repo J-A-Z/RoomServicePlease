@@ -16,6 +16,8 @@ package Main
 	import net.flashpunk.graphics.Image;
 	import Util.AssetLoader;
 	import net.flashpunk.utils.Draw;
+	import flash.net.SharedObject;
+	import Worlds.Floors.FloorOne;
 	
 	
 	/**
@@ -59,7 +61,27 @@ package Main
 			super(800, 600, 60, false);
 			
 			instance = this;
-			
+			 var someFile:SharedObject = SharedObject.getLocal("Save_File_1");
+			if (!(someFile.data.PlayerX is int)) {
+				someFile.data.WorldFloor = "FloorOne";
+				someFile.data.PlayerX = 0;
+				someFile.data.PlayerY = 0;
+				someFile.flush();
+			}
+			var someFile2:SharedObject = SharedObject.getLocal("Save_File_2");
+			if (!(someFile2.data.PlayerX is int)) {
+				someFile2.data.WorldFloor = "FloorOne";
+				someFile2.data.PlayerX = 0;
+				someFile2.data.PlayerY = 0;
+				someFile2.flush();
+			}
+			var someFile3:SharedObject = SharedObject.getLocal("Save_File_3");
+			if (!(someFile3.data.PlayerX is int)) {
+				someFile3.data.WorldFloor = "FloorOne";
+				someFile3.data.PlayerX = 0;
+				someFile3.data.PlayerY = 0;
+				someFile3.flush();
+			}
 			theLoader = new AssetLoader;
 			
 		}

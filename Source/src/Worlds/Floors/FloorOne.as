@@ -19,7 +19,9 @@ package Worlds.Floors
 			add (new FloorOneLevel);
 			
 		}
-		
+		public function returnClass():String {
+			return "FloorOne";
+		}
 	}
 
 }
