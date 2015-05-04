@@ -42,6 +42,8 @@ package Util
 		// Slider Label Images
 		public var brightnessLabel:Image, volumeLabel:Image;
 		
+		public var playerSprite:Image, ghostSprite:Image, coinSprite:Image;
+		
 		// Booleans to keep track of the progress
 		private var imagesDone:Boolean = false;
 		private var soundsDone:Boolean = false;
@@ -252,6 +254,15 @@ package Util
 			
 			[Embed(source = "../../assets/volumeLabel.png")] var _105:Class;
 			volumeLabel = new Image(_105);
+			
+			[Embed(source = "../../assets/playerSprite.png")] var _106:Class;
+			playerSprite = new Image(_106);
+			
+			[Embed(source = "../../assets/ghostSprite.png")] var _107:Class;
+			ghostSprite = new Image(_107);
+			
+			[Embed(source = "../../assets/coinSprite.png")] var _108:Class;
+			coinSprite = new Image(_108);
 			
 			//////////////////////////////////////////////////////////////////
 			

@@ -1,4 +1,4 @@
-package Worlds.Levels 
+package Worlds 
 {
 	import net.flashpunk.Entity;
 	import Main.GameEngine;
@@ -8,7 +8,6 @@ package Worlds.Levels
 	import net.flashpunk.FP;
 	import net.flashpunk.utils.LevelEditor;
 	import Entities.Player;
-	import Entities.Enemies.Ghost;
 	import Util.InputHandler;
 	
 	/**
@@ -16,7 +15,7 @@ package Worlds.Levels
 	 * into a working level that the entities can interact with.
 	 * @author Joe
 	 */
-	public class FloorOneLevel extends Entity
+	public class TutorialLevel extends Entity
 	{
 		
 		// The images that will be used with the LevelEditor.
@@ -30,7 +29,7 @@ package Worlds.Levels
 		/**
 		 * The default constructor will give the level a type to be used when collisions are being tested.
 		 */
-		public function FloorOneLevel() 
+		public function TutorialLevel() 
 		{
 			name = "level";
 		}

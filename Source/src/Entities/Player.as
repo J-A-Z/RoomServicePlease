@@ -17,11 +17,6 @@ package Entities
 	 */
 	public class Player extends Entity {
 		
-		/**
-		 * A placeholder graphic for the player.
-		 */
-		[Embed(source="../../assets/playerPlaceholder.png")] private const PLAYER_IMG:Class;
-		
 		
 		/**
 		 * Variables used to alter players speed and movement.
@@ -56,7 +51,7 @@ package Entities
 		 */
 		public function Player() {
 			
-			graphic = new Image(PLAYER_IMG);
+			graphic = GameEngine.theLoader.playerSprite;
 			
 			name = "player";
 			
@@ -110,6 +105,16 @@ package Entities
 			if (x > FP.halfWidth && x < level.right - FP.halfWidth) {
 				
 				FP.camera.x = x - FP.halfWidth;
+			}
+			
+			var enemy:Entity = collide("enemy", x, y) as Entity;
+			
+			if (enemy) {
+				
+				if (curHealth > 0 && !hit){
+					curHealth -= 1;
+					hit = true;
+				}
 			}
 			
 			// If the user presses P, open up the pause menu.

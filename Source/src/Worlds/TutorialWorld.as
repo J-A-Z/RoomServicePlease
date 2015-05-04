@@ -1,4 +1,5 @@
 package Worlds 
+
 {
 	import net.flashpunk.World;
 	/**
@@ -10,6 +11,11 @@ package Worlds
 		public function TutorialWorld() 
 		{
 			
+			add (new TutorialLevel);
+			
+		}
+		public function returnClass():String {
+			return "FloorOne";
 		}
 		
 	}

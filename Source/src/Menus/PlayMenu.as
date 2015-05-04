@@ -15,6 +15,7 @@ package Menus
 	import Util.InputHandler;
 	import Util.PlayerHUD;
 	import Worlds.Floors.FloorOne;
+	import Worlds.TutorialWorld;
 	
 	/**
 	 * @author Amanda
@@ -116,7 +117,7 @@ package Menus
 		private function startTutorial():void
 		{
 			
-			FP.world = new FloorOne;
+			FP.world = new TutorialWorld;
 		
 		}
 		
